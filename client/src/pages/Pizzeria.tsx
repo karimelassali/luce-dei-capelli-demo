@@ -1,9 +1,10 @@
 /* Pizzeria preview: bold Italian food-counter energy, menu-first structure, clear takeaway CTA, and public-detail confirmation notes. */
 import { ArrowRight, Clock3, MapPin, Phone, QrCode } from "lucide-react";
 
-const signage = "/manus-storage/pizzeria-signage_2589aae6.jpg";
-const display = "/manus-storage/pizza-display_ae11cf5f.jpg";
-const tray = "/manus-storage/pizza-tray_6becb5f3.jpg";
+const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
+const signage = asset("pizzeria-signage.jpg");
+const display = asset("pizza-display.jpg");
+const tray = asset("pizza-tray.jpg");
 
 const menu = [
   ["Focaccia classica", "Impasto sottile, olio buono, crosta dorata"],

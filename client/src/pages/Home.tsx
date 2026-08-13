@@ -2,10 +2,11 @@
 import { useState } from "react";
 import { ArrowUpRight, Clock3, Instagram, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
 
-const heroImage = "/manus-storage/luce-hero_260c5392.jpg";
-const textureImage = "/manus-storage/luce-texture_08e469d4.jpg";
-const interiorImage = "/manus-storage/luce-interior_0a100e12.jpg";
-const markImage = "/manus-storage/luce-mark_600dddc9.png";
+const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
+const heroImage = asset("luce-hero.jpg");
+const textureImage = asset("luce-texture.jpg");
+const interiorImage = asset("luce-interior.jpg");
+const markImage = asset("luce-mark.png");
 
 const services = [
   { no: "01", name: "Taglio & forma", note: "Tagli pensati per vivere bene ogni giorno" },
