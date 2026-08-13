@@ -1,6 +1,6 @@
-# Pizzeria preview update
+# Pizzeria route correction
 
-- [ ] Preserve the Luce dei Capelli route and add a separate pizzeria route.
-- [ ] Upload approved-for-demo reference images outside the project and use lifecycle-safe URLs.
-- [ ] Add pizzeria hero, product gallery, menu preview, takeaway CTA, location, and QR-menu positioning.
-- [ ] Validate both routes at desktop and mobile sizes, then save a checkpoint.
+- [ ] Confirm the public path and whether the route is serving the pizzeria page or the salon homepage.
+- [ ] Fix any route, build, cache, or deployment issue causing the mismatch.
+- [ ] Recheck the pizzeria route and the salon homepage separately.
+- [ ] Save a correction checkpoint after verification.
