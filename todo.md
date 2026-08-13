@@ -1,6 +1,6 @@
-# Before-and-after slider update
+# Pizzeria preview update
 
-- [ ] Define approved/demo asset treatment and accessibility labels.
-- [ ] Add pointer and keyboard-controlled slider interaction to the portfolio section.
-- [ ] Style the divider, handle, labels, and responsive layout in the Terracotta Atelier system.
-- [ ] Verify desktop and mobile rendering, then save a new checkpoint.
+- [ ] Preserve the Luce dei Capelli route and add a separate pizzeria route.
+- [ ] Upload approved-for-demo reference images outside the project and use lifecycle-safe URLs.
+- [ ] Add pizzeria hero, product gallery, menu preview, takeaway CTA, location, and QR-menu positioning.
+- [ ] Validate both routes at desktop and mobile sizes, then save a checkpoint.
