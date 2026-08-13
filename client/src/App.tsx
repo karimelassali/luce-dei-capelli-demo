@@ -8,5 +8,5 @@ import Home from "./pages/Home";
 import Pizzeria from "./pages/Pizzeria";
 
 export default function App() {
-  return <ErrorBoundary><ThemeProvider defaultTheme="light"><TooltipProvider><Toaster /><Router base={import.meta.env.BASE_URL}><Switch><Route path="/" component={Home} /><Route path="/pizzeria-castello" component={Pizzeria} /></Switch></Router></TooltipProvider></ThemeProvider></ErrorBoundary>;
+  return <ErrorBoundary><ThemeProvider defaultTheme="light"><TooltipProvider><Toaster /><Router base={import.meta.env.BASE_URL}><Switch><Route path="/" component={Home} /><Route path="/pizzeria-castello" component={Pizzeria} /><Route path="/pizzeria-castello/" component={Pizzeria} /></Switch></Router></TooltipProvider></ThemeProvider></ErrorBoundary>;
 }
