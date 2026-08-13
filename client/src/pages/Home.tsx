@@ -1,5 +1,6 @@
 /* Terracotta Atelier: asymmetrical editorial salon page with tactile warmth, practical contact CTAs, and calm motion. */
-import { ArrowUpRight, Clock3, Instagram, MapPin, MessageCircle, Phone, Scissors, Sparkles } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, Clock3, Instagram, MapPin, MessageCircle, Phone, Sparkles } from "lucide-react";
 
 const heroImage = "/manus-storage/luce-hero_260c5392.jpg";
 const textureImage = "/manus-storage/luce-texture_08e469d4.jpg";
@@ -11,6 +12,20 @@ const services = [
   { no: "02", name: "Colore su misura", note: "Toni luminosi, naturali, completamente tuoi" },
   { no: "03", name: "Piega & styling", note: "Una finitura speciale, anche per un momento" },
 ];
+
+function BeforeAfterSlider() {
+  const [position, setPosition] = useState(52);
+  return (
+    <div className="before-after" aria-label="Slider interattivo prima e dopo">
+      <div className="before-after-image"><img src={heroImage} alt="Risultato dopo lo styling, capelli mossi e luminosi" /></div>
+      <div className="before-after-before" style={{ width: `${position}%` }}><img src={textureImage} alt="Capelli prima dello styling, texture naturale" /></div>
+      <span className="ba-label ba-before">Prima</span><span className="ba-label ba-after">Dopo</span>
+      <div className="ba-divider" style={{ left: `${position}%` }} aria-hidden="true"><span className="ba-handle">↔</span></div>
+      <input className="ba-range" type="range" min="8" max="92" value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-label="Regola la visualizzazione prima e dopo" />
+      <span className="image-tag">Concept / da sostituire con foto approvate</span>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -49,7 +64,7 @@ export default function Home() {
       </section>
 
       <section className="visual-story">
-        <div className="story-image story-texture"><img src={textureImage} alt="Dettaglio di capelli mossi con riflessi caldi" /><span className="image-tag">Texture / 02</span></div>
+        <div className="story-image story-texture"><BeforeAfterSlider /></div>
         <div className="story-copy"><Sparkles size={19} /><p className="eyebrow">Il dettaglio conta</p><h2>La tua luce<br /><em>è diversa.</em></h2><p>Una buona forma, il tono giusto, una piega che resta. Lavoriamo sui dettagli che fanno la differenza quando esci dal salone e torni alla tua vita.</p><a className="text-link dark-link" href="#contatti">Raccontaci cosa desideri <span>↗</span></a></div>
         <div className="story-image story-interior"><img src={interiorImage} alt="Dettaglio caldo e minimalista dell'interno dello studio" /><span className="image-tag">Studio / 03</span></div>
       </section>
